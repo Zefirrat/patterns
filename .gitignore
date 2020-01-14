@@ -1,0 +1,8 @@
+﻿# Default ignored files
+/.idea.patterns.dir/.idea/workspace.xml
+.idea
+Bin
+bin
+obj
+\.swp
+
