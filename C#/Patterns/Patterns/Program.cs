@@ -1,5 +1,5 @@
 ﻿using System;
-using Factory_Method;
+using FactoryMethod;
 
 namespace Patterns
 {
@@ -7,7 +7,7 @@ namespace Patterns
     {
         static void Main(string[] args)
         {
-            #region Factory_Method
+            #region FactoryMethod
 
             Shop shop1 = new Amazon();
             Shop shop2 = new Wallmart();
