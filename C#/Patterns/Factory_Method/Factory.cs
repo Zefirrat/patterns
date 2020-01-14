@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Factory_Method
+namespace FactoryMethod
 {
     
     #region Creator

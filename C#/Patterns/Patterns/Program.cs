@@ -1,6 +1,7 @@
 ﻿using System;
 using AbstractFactory;
-using Factory_Method;
+using FactoryMethod;
+using Singleton;
 
 namespace Patterns
 {
@@ -48,6 +49,16 @@ namespace Patterns
 
             #endregion
 
+            #region Singleton
+
+            Console.WriteLine("\nDemonstrating \"Singleton\"");
+            
+            Console.WriteLine("\nResources of player:");
+            Console.WriteLine($"Gold: {ResourcesCounter.GetInstance().Gold.ToString()}");
+            Console.WriteLine($"Wood: {ResourcesCounter.GetInstance().Wood.ToString()}");
+            
+            #endregion
+            
             Console.Write("\nPress key to continue...");
             Console.ReadLine();
         }

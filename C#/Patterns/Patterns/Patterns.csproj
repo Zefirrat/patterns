@@ -7,7 +7,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj" />
-      <ProjectReference Include="..\Factory_Method\Factory_Method.csproj" />
+      <ProjectReference Include="..\Factory_Method\FactoryMethod.csproj" />
+      <ProjectReference Include="..\Singleton\Singleton.csproj" />
     </ItemGroup>
 
 </Project>
