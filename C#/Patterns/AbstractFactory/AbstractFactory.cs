@@ -2,65 +2,127 @@
 
 namespace AbstractFactory
 {
-    #region Factory
+    #region Client
 
-    public abstract class Shop
+    public class God
     {
-        public abstract Cookies BuyCookies();
-    }
+        public Weapon Weapon;
+        public Ability Ability;
 
-    public class Amazon : Shop
-    {
-        public override Cookies BuyCookies()
+        public God(GodsBorn godsBorn)
         {
-            return new ChocoPie();
-        }
-    }
-
-    public class Wallmart : Shop
-    {
-        public override Cookies BuyCookies()
-        {
-            return new Oreo();
+            Weapon = godsBorn.CreateWeapon();
+            Ability = godsBorn.CreateAbility();
         }
     }
 
     #endregion
 
+    #region Factory
+
+    public abstract class Weapon
+    {
+        public abstract void Attack();
+    }
+
+    public abstract class Ability
+    {
+        public abstract void Use();
+    }
+
+    public abstract class GodsBorn
+    {
+        public abstract Weapon CreateWeapon();
+        public abstract Ability CreateAbility();
+    }
+    
+    #endregion
+
     #region Product
 
-    public abstract class Cookies
+    public class LightningBolt : Weapon
     {
-        public string Name;
-        public bool IsYummy;
-
-        public void Eat()
+        public override void Attack()
         {
-            string message;
-            message = $"Eating {Name}.";
-            if (IsYummy)
-                message += " Yummy!";
-            else
-                message += " You are a fool if you love it...";
-            Console.WriteLine(message);
+           Console.WriteLine("Zip-zap"); 
         }
     }
 
-    public class Oreo : Cookies
+    public class Trident : Weapon
     {
-        public Oreo()
+        public override void Attack()
         {
-            Name = "Oreo";
-            IsYummy = false;
+           Console.WriteLine("One hit - three holes"); 
         }
     }
 
-    public class ChocoPie : Cookies
+    public class Spell : Weapon
     {
-        public ChocoPie()
+        public override void Attack()
         {
-            Name = "ChocoPie";
-            IsYummy = true;
+           Console.WriteLine("Diddly doodles"); 
+        }
+    }
+
+    public class LordOfTheGods : Ability
+    {
+        public override void Use()
+        {
+           Console.WriteLine("All gods kneel in front of you"); 
+        }
+    }
+    
+    public class LordOfTheSea : Ability
+    {
+        public override void Use()
+        {
+           Console.WriteLine("Fishes are talk to you"); 
+        }
+    }
+
+    public class LordOfTheHell : Ability
+    {
+        public override void Use()
+        {
+           Console.WriteLine("Death is your maiden"); 
+        }
+    }
+
+    public class BornZeus:GodsBorn
+    {
+        public override Weapon CreateWeapon()
+        {
+            return new LightningBolt();
+        }
+
+        public override Ability CreateAbility()
+        {
+           return new LordOfTheGods();
+        }
+    }
+
+    public class BornPoseidon : GodsBorn
+    {
+        public override Weapon CreateWeapon()
+        {
+           return new Trident();
+        }
+
+        public override Ability CreateAbility()
+        {
+            return new LordOfTheSea();
+        }
+    }
+    public class BornAids: GodsBorn
+    {
+        public override Weapon CreateWeapon()
+        {
+           return new Spell();
+        }
+
+        public override Ability CreateAbility()
+        {
+            return new LordOfTheHell();
         }
     }
 
