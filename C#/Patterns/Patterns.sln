@@ -2,9 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "Patterns\Patterns.csproj", "{2C666F16-9363-4C93-85AE-E2BE5993EB3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{902BD58B-50DC-4CF1-97B5-B20062051ABC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{66140B41-932C-4963-B7E7-7AB525716651}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory_Method", "Factory_Method\Factory_Method.csproj", "{902BD58B-50DC-4CF1-97B5-B20062051ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +18,5 @@ Global
 		{902BD58B-50DC-4CF1-97B5-B20062051ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{902BD58B-50DC-4CF1-97B5-B20062051ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{902BD58B-50DC-4CF1-97B5-B20062051ABC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66140B41-932C-4963-B7E7-7AB525716651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66140B41-932C-4963-B7E7-7AB525716651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66140B41-932C-4963-B7E7-7AB525716651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66140B41-932C-4963-B7E7-7AB525716651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
